@@ -147,6 +147,7 @@ button {
     color: #757575;
 }
 
+
 .header--contacts-links:hover {
     color: #2196F3;
 }
@@ -162,6 +163,12 @@ button {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+
+    width: 1600px;
+    height: 600px;
+    background-image: url(../images/hero-background.jpg);
+    background-size: contain;
+    
 }
 
 .hero-title {
@@ -237,6 +244,35 @@ button {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #757575;
+}
+
+.about-item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background: #F5F4FA;
+    border-radius: 4px;
+
+    margin-bottom: 30px;
+}
+.feature1::before {
+    background-image: url(../images/feature1.svg);
+}
+
+.feature2::before {
+    background-image: url(../images/feature2.svg);
+}
+
+.feature3::before {
+    background-image: url(../images/feature3.svg);
+}
+
+.feature4::before {
+    background-image: url(../images/feature4.svg);
 }
 
 /*portfolio main*/
@@ -319,6 +355,32 @@ button {
     padding-bottom: 30px;
 }
 
+.customers {
+    background-color:  #F5F4FA;
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+    --items: 6;
+}
+
+.customers-title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+}
+
 
 /*footer*/
 
@@ -326,6 +388,33 @@ button {
     background: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    display:flex;
+    flex-wrap: wrap;
+    gap: 70;
+    --items: 2;
+
+    align-items: center;
+}
+
+.left {
+    display: block;
+    margin-right: 70px;
+}
+
+.right {
+    display: block;
+    margin-left: auto;
+}
+
+.join-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .footer-logo {
