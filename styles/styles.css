@@ -138,8 +138,10 @@ button {
     padding-bottom: 32px;
 }
 
-
 .header--contacts-links {
+    display: flex;
+    align-items: center;
+    fill: #757575;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -147,6 +149,17 @@ button {
     color: #757575;
 }
 
+.contacts-item {
+    fill: #757575;
+}
+
+.contacts-item:hover {
+    fill: #2196F3;
+}
+
+.contacts-item:focus {
+    fill: #2196F3;
+}
 
 .header--contacts-links:hover {
     color: #2196F3;
@@ -246,35 +259,10 @@ button {
     color: #757575;
 }
 
-.about-item::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    background: #F5F4FA;
-    border-radius: 4px;
-
+.about-icon {
     margin-bottom: 30px;
+    gap: 30px;
 }
-.feature1::before {
-    background-image: url(../images/feature1.svg);
-}
-
-.feature2::before {
-    background-image: url(../images/feature2.svg);
-}
-
-.feature3::before {
-    background-image: url(../images/feature3.svg);
-}
-
-.feature4::before {
-    background-image: url(../images/feature4.svg);
-}
-
 /*portfolio main*/
 
 .portfolio {
