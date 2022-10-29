@@ -151,6 +151,7 @@ button {
 
 .contacts-item {
     fill: #757575;
+    margin-right: 10px;
 }
 
 .contacts-item:hover {
@@ -182,6 +183,7 @@ button {
     background-image: url(../images/hero-background.jpg);
     background-size: contain;
     
+    margin: 0 auto;
 }
 
 .hero-title {
