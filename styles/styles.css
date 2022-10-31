@@ -154,20 +154,20 @@ button {
     margin-right: 10px;
 }
 
-.contacts-item:hover {
-    fill: #2196F3;
-}
-
-.contacts-item:focus {
+.header--contacts-links:hover .contacts-item,
+.header--contacts-links:focus .contacts-item {
+    color: #2196F3;
     fill: #2196F3;
 }
 
 .header--contacts-links:hover {
     color: #2196F3;
+    fill: #2196F3;
 }
 
 .header--contacts-links:focus {
     color: #2196F3;
+    fill: #2196F3;
 }
 
 /*hero*/
@@ -342,20 +342,62 @@ button {
     color: #757575;
     text-align: center;
 
-    padding-bottom: 30px;
+    margin-bottom: 16px;
+}
+
+.team-sm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10;
+    --items: 4;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.team-smbar {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    width: 44px;
+    height: 44px;
+}
+
+.team-sm-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.team-sm-link:hover {
+    background-color:  #188CE8;
+}
+
+.team-sm-link:hover .team-sm-icon {
+    fill: #FFFFFF;
+}
+
+.team-sm-link:focus {
+    background-color:  #188CE8;
+}
+
+.team-sm-link:focus .team-sm-icon {
+    fill: #FFFFFF;
+}
+
+.team-sm-icon {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
 }
 
 .customers {
     background-color:  #F5F4FA;
     padding-bottom: 94px;
     padding-top: 94px;
-}
-
-.customers-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--indent);
-    --items: 6;
 }
 
 .customers-title {
@@ -371,6 +413,48 @@ button {
     color: #212121;
 }
 
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+    --items: 6;
+}
+
+.customers-companies {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    width: 170px;
+    height: 92px;
+}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #AFB1B8;
+}
+
+.customers-link:hover {
+    border: 2px solid #188CE8;
+}
+
+.team-sm-link:hover .team-sm-icon {
+    fill: #188CE8;
+}
+
+.team-sm-link:focus {
+    border: 2px solid #188CE8;
+}
+
+.team-sm-link:focus .team-sm-icon {
+    fill: #188CE8;
+}
+
+.team-sm-icon {
+    fill: #AFB1B8;
+}
 
 /*footer*/
 
