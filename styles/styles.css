@@ -129,16 +129,17 @@ button {
 }
 
 .header--nav-list-link {
+    position: relative;
+
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 0;
+    color: var(--basic-black-color);
+
+    transition: color var(--animation-timing-function);
 }
 
 
-.header--nav-link:hover {
-    color: var(--basic-blue-color);
-}
-
+.header--nav-link:hover,
 .header--nav-link:focus {
     color: var(--basic-blue-color);
 }
@@ -197,7 +198,6 @@ button {
 /*hero*/
 
 .hero {
-    background-color: #2F303A;
     text-align: center;
     padding: 200px 0;
 
@@ -218,7 +218,6 @@ button {
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
     font-weight: 900;
     color: var(--basic-white-color);
 
@@ -273,6 +272,22 @@ button {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
+.about-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: var(--secondary-grey-color);
+    margin-bottom: 30px;
+}
+
+.about-icon {
+    width: 70px;
+    height: 70px;
+    fill: currentColor;
+}
+
 .about-title
 {
     font-weight: 700;
@@ -290,12 +305,7 @@ button {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--basic-black-color);
-}
-
-.about-icon {
-    margin-bottom: 30px;
-    gap: 30px;
+    color: var(--basic-black-color); 
 }
 
 /*gallery*/
@@ -322,16 +332,36 @@ button {
     flex-wrap: wrap;
     gap: var(--indent);
     --items: 3;
+    justify-content: center;
 }
 
 .gallery-list-item {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+
+    position: relative;
 }
 
 .gallery-picture {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.gallery-thumb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-white-color);
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-text {
+    padding: 27px 0;
 }
 
 /*team*/
@@ -397,7 +427,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10;
+    gap: 10px;
 
     margin-bottom: 30px;
 }
@@ -417,6 +447,8 @@ button {
     background-color: var(--basic-white-color);
     color: var(--icon-grey-color);
     border-radius: 50%;
+
+    transition: background-color var(--animation-timing-function), color var(--animation-timing-function);
 }
 
 .team-social-link:hover,
@@ -434,7 +466,7 @@ button {
 /*customers*/
 
 .customers {
-    background-color: var(--secondary-grey-color);
+    background-color: var(--basic-white-color);
     padding-bottom: 94px;
     padding-top: 94px;
 }
@@ -463,6 +495,7 @@ button {
     flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
     width: 170px;
     height: 92px;
+    
 }
 
 .customers-link {
@@ -475,17 +508,13 @@ button {
     background-color: var(--basic-white-color);
     color: var(--icon-grey-color);
     border: 1px solid var(--icon-grey-color);
-}
-
-
-.customers-link:hover {
-    border: 2px solid #188CE8;
+    border-radius: 4px;
 }
 
 .customers-link:hover,
 .customers-link:focus {
     color: var(--basic-white-color);
-    border: 2px solid var(--secondary-blue-color);
+    border: 1px solid var(--secondary-blue-color);
 }
 
 .customers-link:hover .customers-icon,
@@ -555,7 +584,7 @@ button {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--basic-white-color);
     text-decoration: none;
     margin-bottom: 30px;
 }
@@ -661,6 +690,8 @@ button {
     min-width: 73px;
     
     padding: 6px 22px;
+
+    transition: color var(--animation-timing-function), background-color var(--animation-timing-function), box-shadow var(--animation-timing-function);
 }
 
 .filter-button:hover,
@@ -684,7 +715,7 @@ button {
 
 .portfolio-card:hover,
 .portfolio-card:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.6), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-title {
